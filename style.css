@@ -1,0 +1,299 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+html{
+    scroll-behavior: smooth;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+    background-color: #0B2545;
+    height: 200vh;
+    margin: 0;
+    height: 200vh;
+    overflow-x: hidden;
+}
+p{
+    color: #EEF4ED;
+    font-size: 18px;
+}
+
+hr{
+    margin: 0 10%;
+}
+
+/*---------------HEADER---------------*/
+header{
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.grid-header{
+    width: 100%;
+}
+
+
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    50%, 70% {
+        width: 50%;
+    }
+    100%{
+        width: 0;
+    }
+}
+
+@keyframes blink {
+50% {
+    border-color: transparent;
+}
+}
+  
+.banner-title {
+font-size: 8vw;
+font-family: Arial, Helvetica, sans-serif;
+overflow: hidden;
+color: #EEF4ED;
+white-space: nowrap;
+border-right: 0.2em solid;
+width: 0;
+animation: typing 8s steps(40, end) infinite, 
+            blink 1s step-end infinite;
+}
+
+
+header h2{
+    font-size: 3vw;
+    color: #EEF4ED;
+    margin-left: 15%;
+    margin-bottom: 5%;
+}
+
+header img{
+    width: 30%;
+    margin-left: 55%;
+    position: absolute;
+    bottom: 0;
+    filter: drop-shadow(0 0 0.75rem #EEF4ED);
+}
+
+@media screen and (max-width: 900px){
+    header{
+        height: 50vh;
+        display: flex;
+    }
+    header img{
+        width: 45%;
+        margin-left: 45%;
+        position: absolute;
+        bottom: 50%;
+    }
+}
+
+/*---------------PRESENTATION---------------*/
+
+.presentation{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./images/presentation-desktop.png);
+    background-repeat: no-repeat;
+    background-position: contain;
+    opacity: 0;
+}
+.presentation.active {
+    opacity: 1;
+    transition: 1s ease-in-out;
+}
+
+.presentation h2{
+    font-size: 28px;
+    color: #ffffff;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.presentation p{
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 5%;
+}
+
+.presentation img{
+    width: 40%;
+}
+
+.line {
+    width: 100%;
+    height: 0.5vh;
+    background-color: #EEF4ED;
+}
+
+.presentation-txt {
+    padding: 5%;
+    background-color: #0b2545ad;
+    margin: 10%;
+    border-radius: 20px;
+    box-shadow: 0cqi 0 0 1px #EEF4ED;
+    line-height: 40px;
+}
+
+@media screen and (max-width : 900px) {
+    .presentation-txt {
+        line-height: 30px;
+    }
+    
+}
+
+/*---------------PROJETS---------------*/
+
+.projets {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    opacity: 0;
+}
+
+.projets.active {
+    opacity: 1;
+    transition: 1s ease-in-out;
+}
+
+.projets>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+
+.perspective-container {
+    perspective: 500px; /* Définit la distance de la perspective */
+}
+
+.perspective-container .screen-github {
+    width: 50%;
+    grid-column: 1;
+    transform: rotateY(-15deg); /* Appliquez une rotation en Y pour la perspective */
+    box-shadow: 15px 20px 20px rgba(0, 0, 0, 0.7);
+    border: 4px solid black;
+    transition: 0.5s ease;
+}
+
+.perspective-container .screen-github:hover {
+    transform: rotateY(0deg);
+    width: 70%;
+    box-shadow: -3px 20px 20px rgba(0, 0, 0, 0.7);
+}
+
+.logo-github {
+    animation: sautillement 1.5s ease-in-out infinite;
+}
+
+
+@keyframes sautillement {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+
+.projets>div>h2 {
+    color: #EEF4ED;
+    font-size: 28px;
+    text-align: center;
+}
+
+.projets>div>a>img {
+    width: 20%;
+}
+
+
+@media  screen and (max-width : 900px){
+    .projets{
+        display: flex;
+        flex-direction: column;
+    }
+    .perspective-container .screen-github{
+        transform: rotateY(0deg);
+    }
+    .projets>div>a {
+        display: flex;
+        justify-content: center;
+        width: 150%;
+    }
+}
+
+
+
+
+/*---------------RESEAUX---------------*/
+
+.reseaux{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position: contain;
+}
