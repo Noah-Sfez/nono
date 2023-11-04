@@ -64,9 +64,6 @@ hr{
     margin: 0 10%;
 }
 
-* {
-    border: 19px solid red; /* Vous permet de voir si un élément dépasse */
-  }
 
   
   *, *:before, *:after {
