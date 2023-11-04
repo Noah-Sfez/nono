@@ -64,6 +64,17 @@ hr{
     margin: 0 10%;
 }
 
+* {
+    border: 19px solid red; /* Vous permet de voir si un élément dépasse */
+  }
+
+  
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+  
+  
+
 /*---------------HEADER---------------*/
 header{
     height: 100vh;
@@ -76,7 +87,7 @@ header{
     position: relative;
 }
 .grid-header{
-    width: 100%;
+    width: 99%;
 }
 
 
@@ -121,7 +132,7 @@ header h2{
 
 header img{
     width: 30%;
-    margin-left: 55%;
+    right: 15%;
     position: absolute;
     bottom: 0;
     filter: drop-shadow(0 0 0.75rem #EEF4ED);
